@@ -9,10 +9,10 @@ class TaskController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    loadTasks();  // Load tasks from storage on app start
+   loadTasks();  // Load tasks from storage on app start
   }
 
-  // Load tasks from storage
+  //Load tasks from storage
   void loadTasks() {
     var storedTasks = box.read<List>('tasks') ?? [];  // Retrieve stored data
     taskList.assignAll(

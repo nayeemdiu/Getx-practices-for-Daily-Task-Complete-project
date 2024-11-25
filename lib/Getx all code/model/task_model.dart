@@ -1,9 +1,12 @@
+import 'package:flutter/material.dart';
+
 class TaskModel {
   int? id;
   String title;
   String decription;
+  String? dateTime;
 
-  TaskModel({this.id, required this.title, required this.decription});
+  TaskModel({this.id, required this.title, required this.decription,this.dateTime});
 
   // Convert to Map for GetStorage
   Map<String, dynamic> toMap() {
@@ -14,7 +17,7 @@ class TaskModel {
     };
   }
 
-  // Create instance from Map
+  //Create instance from Map
   factory TaskModel.fromMap(Map<String, dynamic> map) {
     return TaskModel(
       id: map['id'],
@@ -22,4 +25,8 @@ class TaskModel {
       decription: map['decription'],
     );
   }
+
+
 }
+
+
